@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'css/flower.css') }}">
+        
+    </head>
+    <body>
+        <video autoplay muted loop>
+            <source src="{{ url_for('static', filename= '739026920.mp4')}}" type="video/mp4">
+        </video>
+        
+        <div>
+            <h1>Welcome to Flower Prediction Portal </h1>
+            <form action="{{ url_for('submit') }}" method="post">
+                <label for="sepalwidth">Sepal Width:</label><br>
+                <input type="number" id="SepalWidth" name="sepalwidth" step="0.01" placeholder="enter the sepal width" required><br>
+
+                <label for="sepallength">Sepal Length:</label><br>
+                <input type="number" id="SepalLength" name="sepallength" step="0.01" placeholder="enter the sepal length" required><br>
+                
+                
+                <label for="petalwidth">Petal Width:</label><br>
+                <input type="number" id="PetalWidth" name="petalwidth" step="0.01" placeholder="enter the petal width" required><br>
+
+                <label for="petallength">Petal Length:</label><br>
+                <input type="number" id="PetalLength" name="petallenght" step="0.01" placeholder="enter the petal length" required><br>                
+                <input type="submit" ><br>
+                 {{ Prediction }}
+
+            </form>
+
+
+        </div>
+
+
+
+
+
+
+    </body>
+
+
+
+
+
+
+</html>
